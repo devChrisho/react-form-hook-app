@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { TextField } from "@mui/material";
+import { useForm, Controller } from "react-hook-form";
 
 function App() {
+  const { control, handleSubmit } = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>React-Hook-Form and Material-UI project</h1>
+
+      <form>
+        <TextField id='firstName' label='First Name' variant='outlined' />
+        <TextField id='firstName' label='First Name' variant='outlined' />
+        <TextField id='firstName' label='First Name' variant='outlined' />
+        <TextField id='firstName' label='First Name' variant='outlined' />
+      </form>
     </div>
   );
 }
